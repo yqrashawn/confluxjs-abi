@@ -1,11 +1,12 @@
 {
-  "name": "ethereumjs-abi",
-  "version": "0.6.8",
-  "description": "Decoder and encoder for the Ethereum ABI",
+  "name": "@cfxjs/abi",
+  "version": "0.0.1",
+  "description": "Decoder and encoder for the Conflux ABI",
   "main": "index.js",
   "dependencies": {
     "bn.js": "^4.11.8",
-    "ethereumjs-util": "^6.0.0"
+    "cfx-util": "^0.0.4",
+    "js-conflux-sdk": "^1.5.8"
   },
   "devDependencies": {
     "coveralls": "^3.0.3",
@@ -17,7 +18,7 @@
   "scripts": {
     "coverage": "istanbul cover _mocha",
     "coveralls": "npm run coverage && coveralls <coverage/lcov.info",
-    "lint": "standard",
+    "lint": "standard --fix && standard",
     "prepublish": "npm run lint && npm run test",
     "test": "istanbul test _mocha -- --reporter spec"
   },
@@ -28,22 +29,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/axic/ethereumjs-abi.git"
+    "url": "git+https://github.com/yqrashawn/confluxjs-abi.git"
   },
-  "keywords": [
-    "ethereum",
-    "ABI"
-  ],
-  "author": "Alex Beregszaszi <alex@rtfs.hu>",
+  "keywords": ["Conflux", "ABI"],
+  "author": "yqrashawn <namy.19@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/axic/ethereumjs-abi/issues"
+    "url": "https://github.com/yqrashawn/confluxjs-abi/issues"
   },
-  "homepage": "https://github.com/axic/ethereumjs-abi",
+  "homepage": "https://github.com/yqrashawn/confluxjs-abi",
   "standard": {
-    "globals": [
-      "describe",
-      "it"
-    ]
+    "globals": ["describe", "it"]
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
